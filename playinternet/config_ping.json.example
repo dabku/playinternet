@@ -1,0 +1,18 @@
+{
+  "db": {
+    "host": "192.168.8.201",
+    "port": 8086,
+    "user": "fill_me",
+    "password": "fill_me",
+    "db_name": "fill_me"
+  },
+  "ping": {
+    "host": "1.1.1.1",
+    "sleep": 60,
+    "count": 3
+  },
+  "logger": {
+    "level": "DEBUG",
+    "file_name": "ping.log"
+  }
+}

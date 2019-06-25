@@ -1,0 +1,16 @@
+{
+  "db": {
+    "host": "192.168.8.201",
+    "port": 8086,
+    "user": "fill_me",
+    "password": "fill_me",
+    "db_name": "fill_me"
+  },
+  "router": {
+    "ip": "192.168.8.1"
+  },
+  "logger": {
+    "level": "INFO",
+    "file_name": "b525.log"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "db": {
+    "host": "192.168.8.201",
+    "port": 8086,
+    "user": "fill_me",
+    "password": "fill_me",
+    "db_name": "my_internet"
+  },
+  "scraper": {
+    "remote": null,
+    "timeout": 60,
+    "play24": {
+      "login": "fill_me",
+      "password": "fill_me"
+    }
+  },
+  "logger": {
+    "level": "INFO",
+    "file_name": "play24.log"
+  }
+}
