@@ -23,5 +23,3 @@ def set_logger(logger, filename, level):
     logger.addHandler(handler)
     logger.setLevel(level)
     return logger
-
-
