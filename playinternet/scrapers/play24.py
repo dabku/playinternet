@@ -77,6 +77,14 @@ class Play24:
 
     def get_data_usage(self):
         data_usage = self._sd.find_element_by_id("summaryDataOutWrapper")
+        try:
+            usage_text = self._get_text_wait_to_populate(data_usage)
+        except Timeout:
+            pass
+        else:
+            return usage_text
+        #apparently Play24 is exchenging
+        data_usage = self._sd.find_element_by_id("summaryDataOutWrapperSpan")
         usage_text = self._get_text_wait_to_populate(data_usage)
         return usage_text
 
@@ -96,7 +104,7 @@ class Play24:
     @staticmethod
     def _get_text_wait_to_populate(element, timeout=30):
         for _ in range(timeout):
-            if element.text:
+            if element.text.strip():
                 return element.text
             sleep(1)
         raise Timeout('Text of the element was not populated for {} seconds'.format(timeout))
